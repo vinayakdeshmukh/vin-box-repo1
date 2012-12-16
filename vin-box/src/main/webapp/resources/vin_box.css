@@ -1,0 +1,23 @@
+@CHARSET "ISO-8859-1";
+
+body,table {
+	font-family: sans-serif;
+	font-size: 12px;
+}
+
+.data,.data td {
+	border-collapse: collapse;
+	xwidth: 100%;
+	border: 1px solid #5f5f5f;
+	margin: 2px;
+	padding: 4px;
+}
+
+.data th {
+	font-weight: bold;
+	border: 1px solid #5f5f5f;
+	background-color: #9C9C9C;
+	color: white;
+	margin: 2px;
+	padding: 4px;
+}
