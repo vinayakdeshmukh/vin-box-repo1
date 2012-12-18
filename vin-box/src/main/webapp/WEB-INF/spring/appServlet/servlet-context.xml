@@ -46,15 +46,16 @@
 	<!-- DataSource Bean -->
 	<beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
 		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-		<!-- 
+		 
 		<beans:property name="url" value="jdbc:mysql://localhost:3306/vin_box?useUnicode=true&amp;characterEncoding=UTF-8"/>
 		<beans:property name="username" value="root"/>
 		<beans:property name="password" value="root"/>
-		-->
+		
+		<!--  
 		<beans:property name="url" value="jdbc:mysql://localhost:10000/d9ffe63ec2417476b884e2300ce985b69?useUnicode=true&amp;characterEncoding=UTF-8"/>
 		<beans:property name="username" value="u7lfD87kUx2nk"/>
 		<beans:property name="password" value="pe4grUr2Clwd5"/>
-		
+		-->
 	</beans:bean>
 	
 	

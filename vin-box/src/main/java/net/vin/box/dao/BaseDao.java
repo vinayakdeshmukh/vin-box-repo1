@@ -5,7 +5,8 @@ import org.hibernate.SessionFactory;
 
 public interface BaseDao {
 
-	public void setSessionFactory(SessionFactory sessionFactory);
+    public void setSessionFactory(SessionFactory sessionFactory);
 
-	public Session getCurrentSession();
+    public Session getCurrentSession();
+
 }

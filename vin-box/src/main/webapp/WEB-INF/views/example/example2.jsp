@@ -20,51 +20,35 @@
 		commandName="searchUserFilter">
 		<table>
 			<tr>
-				<td><form:select path="fields[0].key">
-						<form:option value="">
-							<spring:message code="label.select" />
-						</form:option>
-						<form:option value="userId">
-							<spring:message code="label.userId" />
-						</form:option>
-						<form:option value="firstName">
-							<spring:message code="label.firstName" />
-						</form:option>
-					</form:select></td>
-
-				<td><form:select path="fields[0].operator" items="${fields}" /></td>
+				<td><form:select path="fields[0].key"
+						items="${lookupMapSearchFilter}"
+						itemValue="${lookupMapSearchFilter}" /></td>
+				<td><form:select path="fields[0].operator"
+						items="${lookupMapOperator}" /></td>
 				<td><form:input path="fields[0].value1" /></td>
 			</tr>
 			<tr>
-				<td><form:select path="fields[1].key">
-						<form:option value="userId">
-							<spring:message code="label.userId" />
-						</form:option>
-						<form:option value="firstName">
-							<spring:message code="label.firstName" />
-						</form:option>
-					</form:select></td>
-				<td><form:select path="fields[1].operator">
-						<form:option value="equalTo">
-							<spring:message code="label.equalTo" />
-						</form:option>
-						<form:option value="lessThan">
-							<spring:message code="label.lessThan" />
-						</form:option>
-						<form:option value="greaterThan">
-							<spring:message code="label.greaterThan" />
-						</form:option>
-						<form:option value="like">
-							<spring:message code="label.like" />
-						</form:option>
-						<form:option value="between">
-							<spring:message code="label.between" />
-						</form:option>
-					</form:select></td>
+				<td><form:select path="fields[1].key"
+						items="${lookupMapSearchFilter}" /></td>
+				<td><form:select path="fields[1].operator"
+						items="${lookupMapOperator}" /></td>
 				<td><form:input path="fields[1].value1" /></td>
 				<td><form:input path="fields[1].value2" /></td>
 			</tr>
 
+            <!--  
+			<c:forEach var="field" items="${fields}" varStatus="rowCntr">
+				<tr>
+					<td><form:select path="fields[rowCntr].key"
+							items="${lookupMapSearchFilter}"
+							itemValue="${lookupMapSearchFilter}" /></td>
+					<td><form:select path="fields[rowCntr].operator"
+							items="${lookupMapOperator}" /></td>
+					<td><form:input path="fields[rowCntr].value1" /></td>
+				</tr>
+			</c:forEach>
+            -->
+            
 			<tr>
 				<td colspan="2"><input type="submit"
 					value="<spring:message code="label.searchUser"/>" /></td>
